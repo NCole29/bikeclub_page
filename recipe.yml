@@ -1,0 +1,54 @@
+name: 'Bikeclub Page'
+description: 'Provides Basic Page content type.'
+type: 'Content type'
+recipes:
+  - bikeclub_banner
+  - bikeclub_content_type_base
+install:
+  - comment
+  - menu_ui
+  - node
+  - taxonomy
+  # Contrib.
+  - conditional_fields
+  - scheduler
+config:
+  # If the config we're importing already exists, we keep it with strict: true
+  # and overwrite it with strict: false.
+  strict: false
+  import:
+    comment: '*'
+    node:
+      # Import config which is imported by the Standard profile,
+      # exclude view_mode.rss, include optional views.
+      - core.entity_view_mode.node.full
+      - core.entity_view_mode.node.teaser
+      - system.action.node_delete_action
+      - system.action.node_make_sticky_action
+      - system.action.node_make_unsticky_action
+      - system.action.node_promote_action
+      - system.action.node_publish_action
+      - system.action.node_save_action
+      - system.action.node_unpromote_action
+      - system.action.node_unpublish_action
+      - views.view.content
+      - views.view.frontpage
+    # Do not install/overwrite views.view.taxonomy_term
+    taxonomy: 
+      - core.entity_view_mode.taxonomy_term.full
+      - system.action.taxonomy_term_publish_action
+      - system.action.taxonomy_term_unpublish_action
+      - taxonomy.settings
+    scheduler:
+      - scheduler.settings
+      - views.view.scheduler_scheduled_content
+  actions:
+    node.settings:
+      simpleConfigUpdate:
+        use_admin_theme: true
+    scheduler.settings:
+      simple_config_update:
+        allow_date_only: true
+        default_time: '01:00:00'
+        hide_seconds: true
+        log: false
