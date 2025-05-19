@@ -6,7 +6,7 @@ dependencies:
     - field.field.node.page.banner_image
     - field.field.node.page.field_comment
     - field.field.node.page.field_components
-    - field.field.node.page.field_contact_member
+    - field.field.node.page.field_contact_person
     - field.field.node.page.field_padding
     - field.field.node.page.field_page_access
     - field.field.node.page.field_summary
@@ -80,7 +80,7 @@ third_party_settings:
             uuid: 6817d9a7-4b39-4afc-b4d7-e83572790ed0
             region: content
             configuration:
-              id: 'field_block:node:page:field_contact_member'
+              id: 'field_block:node:page:field_contact_person'
               label: Contact
               label_display: '0'
               provider: layout_builder
@@ -152,7 +152,7 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-  field_contact_member:
+  field_contact_person:
     type: entity_reference_label
     label: above
     settings:

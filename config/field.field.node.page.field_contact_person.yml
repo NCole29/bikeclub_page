@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_contact_member
+    - field.storage.node.field_contact_person
     - node.type.page
-id: node.page.field_contact_member
-field_name: field_contact_member
+id: node.page.field_contact_person
+field_name: field_contact_person
 entity_type: node
 bundle: page
 label: Contact
@@ -26,9 +26,5 @@ settings:
       type: role
       role:
         member: member
-        board: '0'
-        membership_coordinator: '0'
-        site_administrator: '0'
-        administrator: '0'
     include_anonymous: false
 field_type: entity_reference

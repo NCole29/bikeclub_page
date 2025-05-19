@@ -4,8 +4,8 @@ dependencies:
   module:
     - node
     - user
-id: node.field_contact_member
-field_name: field_contact_member
+id: node.field_contact_person
+field_name: field_contact_person
 entity_type: node
 type: entity_reference
 settings:
