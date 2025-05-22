@@ -8,7 +8,6 @@ dependencies:
     - field.field.node.page.field_contact_person
     - field.field.node.page.field_padding
     - field.field.node.page.field_page_access
-    - field.field.node.page.field_provide_a_contact
     - field.field.node.page.field_summary
     - field.field.node.page.field_text
     - field.field.node.page.field_type_of_page
@@ -185,7 +184,26 @@ content:
       match_limit: 10
       size: 60
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields:
+        f4bea69e-2271-4324-a4e2-2414c4b26ce6:
+          entity_type: node
+          bundle: page
+          dependee: field_contact_form
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                target_id: personal
+            effect: show
+            effect_options: {  }
+            selector: ''
   field_padding:
     type: boolean_checkbox
     weight: 12

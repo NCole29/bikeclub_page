@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.field.node.page.banner_image
     - field.field.node.page.field_components
+    - field.field.node.page.field_contact_form
     - field.field.node.page.field_contact_person
     - field.field.node.page.field_padding
     - field.field.node.page.field_page_access
@@ -62,18 +63,18 @@ third_party_settings:
             configuration:
               id: 'field_block:node:page:field_contact_person'
               label: Contact
-              label_display: '0'
+              label_display: visible
               provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
               formatter:
                 type: entity_reference_label
-                label: inline
+                label: visually_hidden
                 settings:
                   link: true
                 third_party_settings: {  }
-            weight: 8
+            weight: 9
             additional: {  }
           c3b3afba-170d-4fd8-8ee9-9899185d92ed:
             uuid: c3b3afba-170d-4fd8-8ee9-9899185d92ed
@@ -92,6 +93,25 @@ third_party_settings:
                 settings: {  }
                 third_party_settings: {  }
             weight: 4
+            additional: {  }
+          20cddc2a-d3b4-4137-afb9-ec1d489d04b9:
+            uuid: 20cddc2a-d3b4-4137-afb9-ec1d489d04b9
+            region: content
+            configuration:
+              id: 'field_block:node:page:field_contact_form'
+              label: Contact
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: visually_hidden
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 8
             additional: {  }
         third_party_settings: {  }
   layout_builder_restrictions:
@@ -154,6 +174,7 @@ content:
     weight: 2
     region: content
 hidden:
+  field_contact_form: true
   field_page_access: true
   field_summary: true
   field_text: true

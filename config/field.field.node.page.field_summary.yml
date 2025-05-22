@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_summary
-    - filter.format.summary_fields    
+    - filter.format.summary_fields
     - node.type.page
   module:
     - text

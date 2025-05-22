@@ -8,7 +8,7 @@ id: node.page.field_contact_person
 field_name: field_contact_person
 entity_type: node
 bundle: page
-label: Contact
+label: 'Contact person'
 description: ''
 required: false
 translatable: false
@@ -19,12 +19,17 @@ settings:
   handler_settings:
     target_bundles: null
     sort:
-      field: _none
+      field: name
       direction: ASC
     auto_create: false
     filter:
       type: role
       role:
         member: member
+        administrator: '0'
+        ride_leader: '0'
+        membership: '0'
+        site_admin: '0'
+        rides_coordinator: '0'
     include_anonymous: false
 field_type: entity_reference
