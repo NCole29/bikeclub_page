@@ -63,16 +63,15 @@ third_party_settings:
             configuration:
               id: 'field_block:node:page:field_contact_person'
               label: Contact
-              label_display: visible
+              label_display: '0'
               provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
               formatter:
-                type: entity_reference_label
-                label: visually_hidden
-                settings:
-                  link: true
+                type: entity_reference_contact
+                label: inline
+                settings: {  }
                 third_party_settings: {  }
             weight: 9
             additional: {  }
@@ -100,14 +99,14 @@ third_party_settings:
             configuration:
               id: 'field_block:node:page:field_contact_form'
               label: Contact
-              label_display: visible
+              label_display: '0'
               provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
               formatter:
                 type: entity_reference_label
-                label: visually_hidden
+                label: inline
                 settings:
                   link: true
                 third_party_settings: {  }
