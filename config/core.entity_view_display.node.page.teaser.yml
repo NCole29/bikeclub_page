@@ -17,11 +17,27 @@ dependencies:
   module:
     - text
     - user
+    - user_contactlink
 id: node.page.teaser
 targetEntityType: node
 bundle: page
 mode: teaser
 content:
+  field_contact_form:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_contact_person:
+    type: entity_reference_contact
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
   field_summary:
     type: text_default
     label: hidden
@@ -32,8 +48,6 @@ content:
 hidden:
   banner_image: true
   field_components: true
-  field_contact_form: true
-  field_contact_person: true
   field_padding: true
   field_page_access: true
   field_text: true

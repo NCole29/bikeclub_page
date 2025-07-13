@@ -29,7 +29,7 @@ third_party_settings:
       label: 'Banner image'
       region: content
       parent_name: group_tabs
-      weight: 15
+      weight: 12
       format_type: tab
       format_settings:
         classes: ''
@@ -42,7 +42,6 @@ third_party_settings:
       children:
         - group_page_content
         - group_place_summary_on_home_page
-        - group_contact_link
         - group_banner_image
       label: Tabs
       region: content
@@ -61,11 +60,12 @@ third_party_settings:
         - field_type_of_page
         - field_text
         - field_components
+        - group_contact_link
         - field_page_access
       label: 'Page content'
       region: hidden
       parent_name: group_tabs
-      weight: 12
+      weight: 10
       format_type: tab
       format_settings:
         classes: ''
@@ -80,9 +80,9 @@ third_party_settings:
         - sticky
         - field_summary
       label: 'Summary for home page'
-      region: hidden
+      region: content
       parent_name: group_tabs
-      weight: 13
+      weight: 11
       format_type: details
       format_settings:
         classes: ''
@@ -93,13 +93,12 @@ third_party_settings:
         required_fields: true
     group_contact_link:
       children:
-        - field_provide_a_contact
         - field_contact_form
         - field_contact_person
       label: 'Contact link'
-      region: hidden
-      parent_name: group_tabs
-      weight: 14
+      region: content
+      parent_name: group_page_content
+      weight: 7
       format_type: tab
       format_settings:
         classes: ''
@@ -133,7 +132,7 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 4
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -171,13 +170,13 @@ content:
     label: hidden
   field_contact_form:
     type: options_select
-    weight: 14
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   field_contact_person:
     type: entity_reference_autocomplete
-    weight: 15
+    weight: 12
     region: content
     settings:
       match_operator: CONTAINS
@@ -186,7 +185,7 @@ content:
       placeholder: ''
     third_party_settings:
       conditional_fields:
-        f4bea69e-2271-4324-a4e2-2414c4b26ce6:
+        7a259b9b-047a-4b90-ba38-1b1616f688ed:
           entity_type: node
           bundle: page
           dependee: field_contact_form
@@ -206,20 +205,14 @@ content:
             selector: ''
   field_padding:
     type: boolean_checkbox
-    weight: 12
+    weight: 13
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_page_access:
     type: options_select
-    weight: 7
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_provide_a_contact:
-    type: options_select
-    weight: 13
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -231,9 +224,6 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings:
-      allowed_formats:
-        hide_help: '1'
-        hide_guidelines: '1'
       conditional_fields:
         859a4cdd-7df6-459c-9d34-5cfd185afc4c:
           entity_type: node
@@ -287,7 +277,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 7
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -298,9 +288,14 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
+  scheduler_settings:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 6
+    weight: 4
     region: content
     settings:
       display_label: true
@@ -339,7 +334,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   url_redirects:
-    weight: 8
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }

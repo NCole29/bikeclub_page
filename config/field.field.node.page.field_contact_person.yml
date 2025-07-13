@@ -8,7 +8,7 @@ id: node.page.field_contact_person
 field_name: field_contact_person
 entity_type: node
 bundle: page
-label: 'Contact person'
+label: Contact
 description: ''
 required: false
 translatable: false
