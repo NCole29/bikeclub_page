@@ -14,15 +14,15 @@ config:
   # and overwrite it with strict: false.
   strict: false
   import:
+    scheduler:
+      - scheduler.settings
+      - views.view.scheduler_scheduled_content
     # Do not install/overwrite views.view.taxonomy_term
     taxonomy: 
       - core.entity_view_mode.taxonomy_term.full
       - system.action.taxonomy_term_publish_action
       - system.action.taxonomy_term_unpublish_action
       - taxonomy.settings
-    scheduler:
-      - scheduler.settings
-      - views.view.scheduler_scheduled_content
   actions:
     node.settings:
       simpleConfigUpdate:
