@@ -25,7 +25,7 @@ default:
       value: true
   sticky:
     -
-      value: false
+      value: true
   revision_translation_affected:
     -
       value: true
