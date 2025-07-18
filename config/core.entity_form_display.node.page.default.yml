@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.page.field_components
     - field.field.node.page.field_contact_form
     - field.field.node.page.field_contact_person
-    - field.field.node.page.field_padding
     - field.field.node.page.field_page_access
     - field.field.node.page.field_summary
     - field.field.node.page.field_text
@@ -25,7 +24,6 @@ third_party_settings:
     group_banner_image:
       children:
         - banner_image
-        - field_padding
       label: 'Banner image'
       region: content
       parent_name: group_tabs
@@ -203,13 +201,6 @@ content:
             effect: show
             effect_options: {  }
             selector: ''
-  field_padding:
-    type: boolean_checkbox
-    weight: 13
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
   field_page_access:
     type: options_select
     weight: 9
