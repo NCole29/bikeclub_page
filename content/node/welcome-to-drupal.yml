@@ -34,9 +34,6 @@ default:
       alias: /welcome-drupal-bike-clubs
       langcode: en
       pathauto: 1
-  field_padding:
-    -
-      value: false
   field_summary:
     -
       value: '<p><strong>Welcome to the Drupal community</strong></p><h2><strong>Get Started</strong></h2><p>There are a few ways to get started with Drupal:</p><ol><li><a href="https://www.drupal.org/docs/user_guide/en/index.html">User Guide:</a> Includes installing, administering, site building, and maintaining the content of a Drupal website.</li><li><a href="https://d11.ddev.site/node/add">Create Content:</a> Want to get right to work? Start adding content. <strong>Note:</strong> the information on this page will go away once you add content to your site. Read on and bookmark resources of interest.</li><li><a href="https://www.drupal.org/docs/extending-drupal">Extend Drupal:</a> Drupal’s core software can be extended and customized in remarkable ways. Install additional functionality and change the look of your site using addons contributed by our community.</li></ol>'

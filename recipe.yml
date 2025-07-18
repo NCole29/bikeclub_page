@@ -4,34 +4,9 @@ type: 'Content type'
 recipes:
   - bikeclub_banner
   - bikeclub_content_type_base
-install:
-  # Contrib.
-  - conditional_fields
-  - scheduler
 config:
-  # If the config we're importing already exists, we keep it with strict: true
-  # and overwrite it with strict: false.
   strict: false
-  import:
-    scheduler:
-      - scheduler.settings
-      - views.view.scheduler_scheduled_content
-    # Do not install/overwrite views.view.taxonomy_term
-    taxonomy: 
-      - core.entity_view_mode.taxonomy_term.full
-      - system.action.taxonomy_term_publish_action
-      - system.action.taxonomy_term_unpublish_action
-      - taxonomy.settings
   actions:
-    node.settings:
-      simpleConfigUpdate:
-        use_admin_theme: true
-    scheduler.settings:
-      simple_config_update:
-        allow_date_only: true
-        default_time: '01:00:00'
-        hide_seconds: true
-        log: false
     user.role.site_admin:
       createIfNotExists:
         label: 'Site administrator'
