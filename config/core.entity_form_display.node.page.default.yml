@@ -18,12 +18,14 @@ dependencies:
     - layout_paragraphs
     - media_library
     - path
+    - scheduler
     - text
 third_party_settings:
   field_group:
     group_banner_image:
       children:
         - banner_image
+        - field_padding
       label: 'Banner image'
       region: content
       parent_name: group_tabs
@@ -147,31 +149,31 @@ content:
       empty_message: ''
     third_party_settings:
       conditional_fields:
-        2a4fd602-f41f-4e2a-ac15-1312a7ff8100:
+        542fd326-f3b5-4324-a8c1-b7b7b8559f54:
           entity_type: node
-          bundle: page
+          bundle: event
           dependee: field_type_of_page
           settings:
             state: visible
             reset: false
             condition: value
             grouping: AND
-            values_set: 2
+            values_set: 1
             value: ''
-            values: '2'
+            values: {  }
             value_form:
               -
-                value: '1'
+                value: '2'
             effect: show
             effect_options: {  }
             selector: ''
-    label: hidden
   field_contact_form:
     type: options_select
     weight: 11
     region: content
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields: {  }
   field_contact_person:
     type: entity_reference_autocomplete
     weight: 12
@@ -183,7 +185,7 @@ content:
       placeholder: ''
     third_party_settings:
       conditional_fields:
-        7a259b9b-047a-4b90-ba38-1b1616f688ed:
+        e1a11aeb-ac74-427b-92d4-f9ae3aa04ed0:
           entity_type: node
           bundle: page
           dependee: field_contact_form
@@ -242,7 +244,7 @@ content:
       placeholder: ''
     third_party_settings:
       conditional_fields:
-        83d99dfe-e884-46ca-8518-08e215afe1db:
+        6f13a947-2157-4011-b842-dc62cee1b2a3:
           entity_type: node
           bundle: page
           dependee: field_type_of_page
@@ -251,9 +253,9 @@ content:
             reset: false
             condition: value
             grouping: AND
-            values_set: 2
+            values_set: 1
             value: ''
-            values: '1'
+            values: {  }
             value_form:
               -
                 value: '1'
@@ -279,8 +281,14 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 52
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   scheduler_settings:
-    weight: 7
+    weight: 50
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -324,6 +332,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 54
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   url_redirects:
     weight: 6
     region: content
@@ -331,6 +345,4 @@ content:
     third_party_settings: {  }
 hidden:
   layout_builder__layout: true
-  publish_on: true
   uid: true
-  unpublish_on: true
