@@ -16,7 +16,6 @@ dependencies:
   module:
     - text
     - user
-    - user_contactlink
 id: node.page.teaser
 targetEntityType: node
 bundle: page
