@@ -552,7 +552,7 @@ display:
           plugin_id: text
           empty: false
           content:
-            value: '<h2>Announcements</n2>'
+            value: "<h2><strong>Announcements</strong></h2>\r\n"
             format: basic_html
           tokenize: false
       display_extenders: {  }

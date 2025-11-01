@@ -9,7 +9,7 @@ field_name: field_contact_person
 entity_type: node
 bundle: page
 label: Contact
-description: "The contact's name appears without a link to their contact form if they disabled the personal contact form in their account settings."
+description: ''
 required: false
 translatable: false
 default_value: {  }
@@ -26,6 +26,7 @@ settings:
       type: role
       role:
         member: member
+        events_coordinator: '0'
         administrator: '0'
         ride_leader: '0'
         membership: '0'
