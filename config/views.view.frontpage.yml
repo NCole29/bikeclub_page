@@ -2,11 +2,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.card_row
     - core.entity_view_mode.node.rss
+    - core.entity_view_mode.node.summary
     - core.entity_view_mode.node.teaser
-    - node.type.announcement
-    - node.type.event
     - node.type.page
   module:
     - datetime
@@ -441,6 +439,7 @@ display:
           value:
             announcement: announcement
             page: page
+            webform: webform
           group: 2
           exposed: false
           expose:
@@ -532,7 +531,7 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: card_row
+          view_mode: summary
       defaults:
         pager: false
         style: false
