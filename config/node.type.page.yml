@@ -24,7 +24,7 @@ third_party_settings:
     unpublish_revision: false
 name: 'Basic page'
 type: page
-description: "Use <em>Basic Pages</em> for permanent content. Create simple pages or use section layouts with text, callouts, cards, and images.  Basic pages are not automatically linked; you must manually create a link to them from another existing page or add them to a menu. Pages may be public or limited to Members or Administrators.\r\n"
+description: "Use <em>Basic Pages</em> for permanent content. They can be created as simple pages or designed with text, callouts, cards, and images within sections. Basic pages are not automatically linked; you must manually create a link to them from another existing page or add them to a menu. Pages may be public or limited to Members or Administrators.\r\n"
 help: "<em>Basic pages</em> display permanent website content. Click \"Menu settings\" at left to provide a menu link to the page, or link to this page from another page or block.\r\n"
 new_revision: true
 preview_mode: 1

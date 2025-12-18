@@ -1,0 +1,49 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 683a410d-5017-44de-a8cf-e6d3cb7cb1a8
+  bundle: page
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Page not found'
+  created:
+    -
+      value: 1763582820
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /page-not-found
+      langcode: en
+      pathauto: 1
+  field_contact_form:
+    -
+      target_id: feedback
+  field_text:
+    -
+      value: '<h2>Ooops!&nbsp;</h2><h2>Something went wrong. &nbsp;</h2><p>&nbsp;</p><h3>Please let us know if there is a broken link on the site.</h3><h3>Thanks!</h3>'
+      format: basic_html
+  field_type_of_page:
+    -
+      value: 1

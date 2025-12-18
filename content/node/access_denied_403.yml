@@ -1,0 +1,46 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 550a15eb-b1f4-4d17-a71b-c4e391c7f7c4
+  bundle: page
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Access denied'
+  created:
+    -
+      value: 1675705645
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /access-denied
+      langcode: en
+      pathauto: 1
+  field_text:
+    -
+      value: '<p>You are not authorized to access this page.</p><p>If you are a club member trying to access member-only content, please <a href="/user/login">login</a>.</p>'
+      format: full_html
+  field_type_of_page:
+    -
+      value: 1
