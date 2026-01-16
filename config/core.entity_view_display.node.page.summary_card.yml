@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.summary_2
+    - core.entity_view_mode.node.summary_card
     - field.field.node.page.banner_image
     - field.field.node.page.field_components
     - field.field.node.page.field_contact_form
@@ -31,10 +31,10 @@ third_party_settings:
       denylisted_blocks: {  }
       allowlisted_blocks: {  }
       restricted_categories: {  }
-id: node.page.summary_2
+id: node.page.summary_card
 targetEntityType: node
 bundle: page
-mode: summary_2
+mode: summary_card
 content:
   field_summary:
     type: text_default
